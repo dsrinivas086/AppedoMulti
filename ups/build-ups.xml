@@ -1,0 +1,20 @@
+<project name="ups" default="package.ups">
+	<description> UPS WAR Process Started </description>
+	<target name="clean.ups">
+		<echo> UPS Clean Target Called </echo>
+		<delete dir="ups/upstemp"/>
+		<echo> Test UPS </echo>
+	</target>
+	<target name="compile" depends="clean.ups">
+		<mkdir dir="ups/upstemp/classes"/>
+		<javac srcdir="ups/src" destdir="ups/upstemp/classes" includeantruntime="false"/>
+	</target>
+	<target name="package.ups" depends="compile">
+		<war destfile="ups/upstemp/ups.war" webxml="">
+			<fileset dir="ups/src/jsp"/>
+			<include name="ups/upstemp/*.classes"/>
+			<include name="usp/src/*.jsp"/>
+		</war>
+	</target>
+
+</project>
