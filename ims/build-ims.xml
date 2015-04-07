@@ -1,0 +1,19 @@
+<project name="ims" default="package.ims">
+	<description>IMS WAR Process Started </description>
+	<target name="clean.ims">
+		<echo> IMS Target Called </echo>
+		<delete dir="ims/imstemp"/>	
+		<echo> Test IMS </echo>
+	</target>
+	<target name="compile" depends="clean.ims">
+		<mkdir dir="ims/imstemp/classes"/>
+		<javac srcdir="ims/src" destdir="ims/imstemp/classes" includeantruntime="false"/>
+	</target>
+	<target name="package.ims" depends="compile">
+		<war destfile="ims/imstemp/ims.war" webxml="">
+			<fileset dir="ims/src/jsp"/>
+			<include name="ims/imstemp/*.classes"/>
+			<include name="ims/src/*.jsp"/>
+		</war>
+	</target>
+</project>
