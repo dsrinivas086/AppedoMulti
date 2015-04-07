@@ -1,0 +1,6 @@
+<project name="multi" default="package">
+	<target name="package">
+	<ant antfile="ims/build-ims.xml" target="package.ims"/>
+	<ant antfile="ups/build-ups.xml" target="package.ups"/>
+	</target>
+</project>
