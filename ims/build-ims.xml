@@ -1,5 +1,6 @@
 <project name="ims" default="package.ims">
 	<description>IMS WAR Process Started </description>
+	<property name="clean.ims" value="ims.clean"/>
 	<target name="clean.ims">
 		<echo> IMS Target Called </echo>
 		<delete dir="${ims.temp}"/>	

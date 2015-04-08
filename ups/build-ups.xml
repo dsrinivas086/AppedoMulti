@@ -1,5 +1,6 @@
 <project name="ups" default="package.ups">
 	<description> UPS WAR Process Started </description>
+	<property name="clean.ups" value="ups.clean"/>
 	<target name="clean.ups">
 		<echo> UPS Clean Target Called </echo>
 		<delete dir="${ups.temp}"/>
