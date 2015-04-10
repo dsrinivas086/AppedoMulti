@@ -1,4 +1,5 @@
 <project name="multi" default="package">
+	<description> Controls the Build Activity for both IMS, UPS </description>
 	<target name="package">
 	<property file="common.properties"/>
 	<ant antfile="${ims.build}" target="package.ims"/>
