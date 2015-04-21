@@ -6,7 +6,7 @@
 		<echo> Test IMS </echo>
 	</target>
 	<target name="compile" depends="clean.ims">
-		<echo> Compilation process Started>
+		<echo> Compilation process Started</echo>
 		<mkdir dir="${ims.temp}/classes"/>
 		<javac srcdir="${ims.src}" destdir="${ims.temp}/classes" includeantruntime="false"/>
 	</target>
