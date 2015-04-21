@@ -1,5 +1,4 @@
 <project name="ims" default="package.ims">
-	<description>IMS WAR Process Started </description>
 	<property name="clean.ims" value="ims.clean"/>
 	<target name="clean.ims">
 		<echo> IMS Target Called </echo>
@@ -7,6 +6,7 @@
 		<echo> Test IMS </echo>
 	</target>
 	<target name="compile" depends="clean.ims">
+		<echo> Compilation process Started>
 		<mkdir dir="${ims.temp}/classes"/>
 		<javac srcdir="${ims.src}" destdir="${ims.temp}/classes" includeantruntime="false"/>
 	</target>
