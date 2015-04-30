@@ -11,7 +11,7 @@
 		<javac srcdir="${ims.src}" destdir="${ims.temp}/classes" includeantruntime="false"/>
 	</target>
 	<target name="package.ims" depends="compile">
-		<war destfile="${ims.temp}/ims1.war" webxml="">
+		<war destfile="${ims.temp}/ims.war" webxml="">
 			<fileset dir="${ims.src}/jsp"/>
 			<include name="${ims.temp}/*.classes"/>
 			<include name="${ims.src}/*.jsp"/>
