@@ -1,6 +1,7 @@
 <project name="ups" default="package.ups">
 	<description> UPS WAR Process Started </description>
 	<property name="clean.ups" value="ups.clean"/>
+	<property name="name" value="ups"/>
 	<target name="clean.ups">
 		<echo> UPS Clean Target Called </echo>
 		<delete dir="${ups.temp}"/>
@@ -11,7 +12,7 @@
 		<javac srcdir="${ups.src}" destdir="${ups.temp}/classes" includeantruntime="false"/>
 	</target>
 	<target name="package.ups" depends="compile">
-		<war destfile="${ups.temp}/ups.war" webxml="">
+		<war destfile="${ups.temp}/${name}-${TODAY}.war" webxml="">
 			<fileset dir="${ups.src}/jsp"/>
 			<include name="${ups.temp}/*.classes"/>
 			<include name="${ups.src}/*.jsp"/>
