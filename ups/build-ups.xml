@@ -12,6 +12,7 @@
 		<javac srcdir="${ups.src}" destdir="${ups.temp}/classes" includeantruntime="false"/>
 	</target>
 	<target name="package.ups" depends="compile">
+		<tstamp/>
 		<war destfile="${ups.temp}/${name}-${TODAY}.war" webxml="">
 			<fileset dir="${ups.src}/jsp"/>
 			<include name="${ups.temp}/*.classes"/>
