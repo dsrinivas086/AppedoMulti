@@ -1,5 +1,6 @@
 <project name="ims" default="package.ims">
 	<property name="clean.ims" value="ims.clean"/>
+	<property name="name" value="ims"
 	<target name="clean.ims">
 		<echo> IMS Target Called </echo>
 		<delete dir="${ims.temp}"/>	
@@ -11,7 +12,8 @@
 		<javac srcdir="${ims.src}" destdir="${ims.temp}/classes" includeantruntime="false"/>
 	</target>
 	<target name="package.ims" depends="compile">
-		<war destfile="${ims.temp}/ims.war" webxml="">
+		<tstamp/>
+		<war destfile="${ims.temp}/${name}-${TODAY}.war" webxml="">
 			<fileset dir="${ims.src}/jsp"/>
 			<include name="${ims.temp}/*.classes"/>
 			<include name="${ims.src}/*.jsp"/>
