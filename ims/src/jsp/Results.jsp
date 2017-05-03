@@ -1,1 +1,1 @@
-<h2> Welcome to Appedo Build Release Team <h2>
+<h2> Welcome to Build Release Team <h2>
