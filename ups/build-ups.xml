@@ -1,5 +1,5 @@
 <project name="ups" default="package.ups">
-	<description> UPS WAR Process Started </description>
+	<description> UPS WAR Process Started Test </description>
 	<property name="clean.ups" value="ups.clean"/>
 	<property name="name" value="ups"/>
 	<target name="clean.ups">
