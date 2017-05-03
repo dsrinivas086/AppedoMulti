@@ -3,7 +3,7 @@
 	<property name="clean.ups" value="ups.clean"/>
 	<property name="name" value="ups"/>
 	<target name="clean.ups">
-		<echo> UPS Clean Target Called Blocked</echo>
+		<echo> UPS Clean Target Called </echo>
 		<delete dir="${ups.temp}"/>
 		<echo> Test UPS </echo>
 	</target>
