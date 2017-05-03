@@ -2,7 +2,7 @@
 	<property name="clean.ims" value="ims.clean"/>
 	<property name="name" value="ims"/>
 	<target name="clean.ims">
-		<echo> IMS Target Called Test</echo>
+		<echo> IMS Target Called </echo>
 		<delete dir="${ims.temp}"/>	
 		<echo> Test IMS </echo>
 	</target>
