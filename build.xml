@@ -1,5 +1,5 @@
 <project name="multi" default="package">
-	<description> COMMON BUILD FILE FOR IMS, UPS Tested</description>
+	<description> COMMON BUILD FILE FOR IMS, UPS </description>
 	<target name="package">
 	<property file="common.properties"/>
 	<ant antfile="${ims.build}" target="package.ims"/>
