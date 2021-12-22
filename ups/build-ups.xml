@@ -13,7 +13,7 @@
 	</target>
 	<target name="package.ups" depends="compile">
 		<tstamp/>
-		<war destfile="${ups.temp}/${name}-${TODAY}-{TSTAMP}.war" webxml="">
+		<war destfile="${ups.temp}/${name}.war" webxml="">
 			<fileset dir="${ups.src}/jsp"/>
 			<include name="${ups.temp}/*.classes"/>
 			<include name="${ups.src}/*.jsp"/>
