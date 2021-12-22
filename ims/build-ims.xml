@@ -13,7 +13,7 @@
 	</target>
 	<target name="package.ims" depends="compile">
 		<tstamp/>
-		<war destfile="${ims.temp}/${name}-${TODAY}-${TSTAMP}.war" webxml="">
+		<war destfile="${ims.temp}/${name}.war" webxml="">
 			<fileset dir="${ims.src}/jsp"/>
 			<include name="${ims.temp}/*.classes"/>
 			<include name="${ims.src}/*.jsp"/>
